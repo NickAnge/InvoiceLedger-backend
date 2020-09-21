@@ -19,3 +19,13 @@ $npm -install
 
 ## Start
 $npm - start
+
+
+
+## Containirize backend
+The purpose of this step is to containirized the different parts of the backEnd. 
+
+## STEPS
+-  1) First we must extract all the environment variables
+-  2) Second we must implement the dockerfiles
+-  3) We must use docker compose to connect them
