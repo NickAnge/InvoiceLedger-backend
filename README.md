@@ -20,7 +20,7 @@ $npm -install
 ## Start
 $npm - start
 
-# Next Steps
+## Next Steps
 
 ### Containirize backend
 The purpose of this step is to containirized the different parts of the backEnd. 
