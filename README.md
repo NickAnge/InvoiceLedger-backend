@@ -22,7 +22,7 @@ $npm - start
 
 ## Next Steps
 
-### Containirize backend
+###  1) Containirize backend
 The purpose of this step is to containirized the different parts of the backEnd. 
 
 ## STEPS
@@ -31,5 +31,5 @@ The purpose of this step is to containirized the different parts of the backEnd.
 -  3) We must use docker compose to connect them
 
 
-### Create kubernetes deployemnt
+###  2) Create kubernetes deployemnt
 The purpose of this steps is to deploy the backend into kubernetes a orchestration tool
