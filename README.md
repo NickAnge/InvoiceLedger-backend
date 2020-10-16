@@ -15,10 +15,10 @@ Jwt: authentication
 
 
 ## Install Dependencies
-$npm -install
+    $npm -install
 
 ## Start
-$npm - start
+    $npm - start
 
 ## Future Steps
   1) Containirize backend
