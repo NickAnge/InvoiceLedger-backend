@@ -10,7 +10,7 @@ For this Api i used the following tools:
 nodeJs : As base to built my network application\
 PostgreSql : My database(User-Invoices)\
 Sequalize\
-Jwt: authentication\
+Jwt: authentication
 
 
 
@@ -20,16 +20,6 @@ $npm -install
 ## Start
 $npm - start
 
-## Next Steps
-
-###  1) Containirize backend
-The purpose of this step is to containirized the different parts of the backEnd. 
-
-## STEPS
--  1) First we must extract all the environment variables
--  2) Second we must implement the dockerfiles
--  3) We must use docker compose to connect them
-
-
-###  2) Create kubernetes deployemnt
-The purpose of this steps is to deploy the backend into kubernetes a orchestration tool
+## Future Steps
+  1) Containirize backend
+  2) Create kubernetes deployemnt
