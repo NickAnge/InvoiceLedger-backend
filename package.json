@@ -4,7 +4,7 @@
   "description": "Delivery Ledger",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha ./test/* --exit",
     "start": "nodemon server.js"
   },
   "author": "Nick Angelopoulos",
@@ -24,6 +24,10 @@
     "sequelize": "^6.3.5"
   },
   "devDependencies": {
-    "nodemon": "^1.19.3"
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.2.1",
+    "nodemon": "^1.19.3",
+    "supertest": "^6.1.1"
   }
 }

@@ -6,6 +6,10 @@ const jwt = require("jsonwebtoken")
 const config = require("../config/main")
 const Op = Sequelize.Op;
 
+/*
+*   GET /users route to retrive all the users.
+*/
+
 exports.showUsers = function (req, res) {
     User.findAll()
         .then(users => {
@@ -15,8 +19,13 @@ exports.showUsers = function (req, res) {
         })
         .catch(err => console.log(err.message))
 }
-//register User with jwt
+
+/*
+*   POST /auth/register route to create a new user.
+*/
+
 exports.register = function (req, res) {
+    console.log(req)
     if (req.body.email == undefined || req.body.username == undefined) {
         res.status(400).json({
             message: "Email undefined"
@@ -76,7 +85,10 @@ exports.register = function (req, res) {
     }
 
 }
-//login User giving token
+
+/*
+*   POST /auth/login route to get credentials from the user.
+*/
 exports.login = function (req, res) {
     if (req.body.email == undefined) {
         res.status(400).json({
@@ -113,7 +125,7 @@ exports.login = function (req, res) {
                         }
                         else if (token) {
                             console.log(token)
-                            res.json({
+                            res.status(201).json({
                                 success: "Auth Successful",
                                 token: `Bearer ${token}`
                             });
@@ -129,7 +141,10 @@ exports.login = function (req, res) {
             });
         });
 }
-//find User by ID
+
+/*
+*   GET /users/{user_id} route to get info from a user.
+*/
 exports.findUser = function (req, res) {
     User.findOne({
         where: { id: req.params.user_id }
@@ -152,7 +167,9 @@ exports.findUser = function (req, res) {
     });
 }
 
-//delete User by ID
+/*
+*   Delete /users/{user_id} route to delete  a user.
+*/
 exports.delete = function (req, res) {
     User.destroy({
         where: {
@@ -173,7 +190,12 @@ exports.delete = function (req, res) {
             res.status(500).send(error);
         });
 }
-//update User by Username
+
+
+/*
+*   Search /users/{user_id} route to find  a user.
+*/
+
 exports.update = function (req, res) {
     User.findOne({
         where: {

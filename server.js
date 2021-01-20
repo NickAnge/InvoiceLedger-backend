@@ -10,13 +10,13 @@ const app = express();
 
 
 //Test db CHANGE TO BE SEEn
-db.authenticate().then(()=>console.log("Database connected")).catch((error) => console.log(error))
+db.authenticate().then(() => console.log("Database connected")).catch((error) => console.log(error))
 //For BodyParser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 //initialize passport
 
- app.use(passport.initialize());
+app.use(passport.initialize());
 //Cors allow
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -37,7 +37,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/', function (req, res) {
-    
+
     res.send('Welcome to Delivery Ledger');
 });
 //PORT Number
@@ -70,4 +70,4 @@ app.use((error, req, res, next) => {
     });
 });
 
-// module.exports = server;
+module.exports = app;
