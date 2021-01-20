@@ -4,14 +4,13 @@
 This back-end app was built by me, for a project at my work. This api includes  User management and Invoice management. This means that someone can Register/login(with authentication) and can add a new Invοice of his choice.
 
 
-## TOOLS
-For this Api i used the following tools:
+## TOOLS-STACK
+- NodeJS
+- PostgreSQL
 
-nodeJs : As base to built my network application\
-PostgreSql : My database(User-Invoices)\
-Sequalize\
-Jwt: authentication
-
+## TOOLS-TEST
+- Mocha framework
+- Chai library
 
 
 ## File Structure
@@ -33,8 +32,12 @@ Within the download you'll find the following directories and files:
 |-- User
   |-- index.js
   |-- model.js
-
-
+|--.gitignore
+|--package-lock.json
+|--package.json
+|--README.md
+|--router.js
+|--server.js
 ```
 
 
@@ -46,5 +49,5 @@ Within the download you'll find the following directories and files:
     $npm - start
 
 ## Future Steps
-  1) Containirize backend
-  2) Create kubernetes deployemnt
+
+- Containerize the app
