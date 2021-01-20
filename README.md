@@ -14,6 +14,31 @@ Jwt: authentication
 
 
 
+## File Structure
+Within the download you'll find the following directories and files:
+
+
+```
+|-- config
+  |-- main.js
+  |-- multer.js
+  |-- passport.js
+|-- database
+  |-- config.js
+|-- DeliveryNote
+  |-- index.js
+  |-- model.js
+|-- test
+  |-- apitest.js
+|-- User
+  |-- index.js
+  |-- model.js
+
+
+```
+
+
+
 ## Install Dependencies
     $npm -install
 
