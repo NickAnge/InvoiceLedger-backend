@@ -4,7 +4,7 @@ var should = chai.should();
 chai.use(chaiHttp);
 let server = require("../server");
 
-const db = require('../database/config');
+// const db = require('../database/config');
 
 
 var User = require("../User/model")
