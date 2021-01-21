@@ -23,39 +23,39 @@ describe("Welcome Message", () => {
 });
 
 
-describe("Users", () => {
-    let token;
-    describe("Autheticate users", () => {
-        it("should login user,", (done) => {
-            chai.request(server)
-                .post('/auth/login')
-                .send({
-                    "email": "test@email.gr",
-                    "password": "tester",
-                }).end((err, res) => {
-                    res.body.should.have.property('token');
-                    res.should.have.status(201)
-                    token = res.body.token;
-                    done();
-                })
+// describe("Users", () => {
+//     let token;
+//     describe("Autheticate users", () => {
+//         it("should login user,", (done) => {
+//             chai.request(server)
+//                 .post('/auth/login')
+//                 .send({
+//                     "email": "test@email.gr",
+//                     "password": "tester",
+//                 }).end((err, res) => {
+//                     res.body.should.have.property('token');
+//                     res.should.have.status(201)
+//                     token = res.body.token;
+//                     done();
+//                 })
 
-        });
-    });
+//         });
+//     });
 
-    describe("Authenticated URLS", () => {
-        it("Should /GET all users", (done) => {
-            chai.request(server)
-                .get("/users")
-                .set('Authorization', token)
-                .end((err, res) => {
-                    res.should.have.status(200);
-                    done();
-                })
-        })
-    })
+//     describe("Authenticated URLS", () => {
+//         it("Should /GET all users", (done) => {
+//             chai.request(server)
+//                 .get("/users")
+//                 .set('Authorization', token)
+//                 .end((err, res) => {
+//                     res.should.have.status(200);
+//                     done();
+//                 })
+//         })
+//     })
 
-    /*
-    * ADD mpre api tests in the future
-    */
-});
+//     /*
+//     * ADD mpre api tests in the future
+//     */
+// });
 
